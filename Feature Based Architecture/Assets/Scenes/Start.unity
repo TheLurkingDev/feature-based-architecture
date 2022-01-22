@@ -468,6 +468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 997992825}
+  - component: {fileID: 997992827}
   - component: {fileID: 997992826}
   m_Layer: 0
   m_Name: GameManager
@@ -500,6 +501,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bb2b0bf395727940910aeeca856f3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSceneChange:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &997992827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997992824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c745d8168e1a041b5c5bf423bd2536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1000439437
