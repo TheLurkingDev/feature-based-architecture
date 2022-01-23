@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 namespace TheLurkingDev.Managers
 {
-    public class GameManager : MonoBehaviour
+    // INHERITANCE
+    public class GameManager : Manager
     {
-        public static GameManager Instance { get; private set; }
+        //public static GameManager Instance { get; private set; }
         private List<IManager> managers = new List<IManager>();
         private void Awake()
         {
@@ -19,22 +19,10 @@ namespace TheLurkingDev.Managers
             //var sceneManager = managers.Find(m => m.GetManager<SceneState>() != null);
         }
 
-        public IManager GetManager<T>()
+        // POLYMORPHISM
+        public override IManager GetManager<T>()
         {
             return managers.Find(m => m.GetManager<T>() != null);
-        }
-
-        private void EstablishSingleton()
-        {
-            if(Instance != null && Instance != this)
-            {                
-                Destroy(gameObject);
-            }
-            else
-            {                
-                Instance = this;
-                DontDestroyOnLoad(this);
-            }
         }
     }    
 }

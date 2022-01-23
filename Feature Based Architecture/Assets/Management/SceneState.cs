@@ -4,9 +4,10 @@ using UnityEngine.SceneManagement;
 
 namespace TheLurkingDev.Managers
 {
-    public class SceneState : MonoBehaviour, IManager
+    public class SceneState : Manager
     {
         public UnityEvent<GameScenes, GameScenes> OnSceneChange;        
+        // ENCAPSULATION
         public GameScenes GameScene { get; private set; }
 
         private void Start()
@@ -22,11 +23,6 @@ namespace TheLurkingDev.Managers
             OnSceneChange.Invoke(GameScene, gameScene);
                         
             SceneManager.LoadScene((int)gameScene);
-        }
-
-        public IManager GetManager<T>()
-        {
-            return this;
         }
     }
 
