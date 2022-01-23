@@ -15,7 +15,7 @@ namespace TheLurkingDev.Managers
 
         private void Start()
         {
-            managers = GetComponents<IManager>().ToList();
+            managers = GetComponents<IManager>().ToList();            
             //var sceneManager = managers.Find(m => m.GetManager<SceneState>() != null);
         }
 
@@ -33,6 +33,7 @@ namespace TheLurkingDev.Managers
             else
             {                
                 Instance = this;
+                DontDestroyOnLoad(this);
             }
         }
     }    

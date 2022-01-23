@@ -13,7 +13,8 @@ namespace TheLurkingDev.Managers
         {
             //OnSceneChange = new UnityEvent<GameScenes, GameScenes>();
             //GameScene = GameScenes.NotDefined;
-            //ChangeScene(GameScenes.Start);            
+            //ChangeScene(GameScenes.Start);
+            DontDestroyOnLoad(this);
         }
 
         public void ChangeScene(GameScenes gameScene)
